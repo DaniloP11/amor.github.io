@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carta</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <div class="container-letter">
+      <div class="cover"></div>
+      <span class="heart">♥</span>
+      <p class="paper" id="mainMessage">
+        ¡Feliz 5º aniversario, amor! 🎉❤️ <br>
+        Cinco años llenos amor y aventuras. Quiero seguir construyendo recuerdos juntos. Te amo más cada día.
+      </p>
+      <div class="letter"></div>
+    </div>
+    <div class="options">
+      <button id="open">Abrir</button>
+      <button id="close">Cerrar</butto>
+    </div>
+
+    <div class="options">
+      <button id="siguiente">Siguiente</button>
+    </div>
+
+  </main>
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('siguiente').addEventListener('click', function() {
+        window.location.href = "casar/casar.html"; // Redirigir a index.html dentro de la carpeta casar
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amor Lindo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d421ef;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #a01ee1;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+       
+        h2 {
+            margin-bottom: 1rem;
+            color: #fecdff;
+            font-family: 'Pacifico', cursive; /* Fuente decorativa */
+            font-size: 2rem;
+            background: linear-gradient(45deg, #fecdff, #ff77ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+            animation: shine 2s infinite;
+            text-align: center;
+        }
+        @keyframes shine {
+            0% {
+                background-position: -200% 0;
+            }
+            100% {
+                background-position: 200% 0;
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        input[type="date"] {
+            padding: 0.5rem;
+            border: 1px solid #ff2ef5;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        button {
+            padding: 0.75rem;
+            border: none;
+            border-radius: 4px;
+            background-color: #ff21d6;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #ff31fc;
+        }
+        button:active {
+            background-color: #c013ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Ingrese la fecha en que se conocieron</h2>
+        <form id="loginForm">
+            <input type="date" id="dateInput" required>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evitar que el formulario se envíe automáticamente
+
+            const inputDate = document.getElementById('dateInput').value;
+            const correctDate = "2019-08-10"; // Formato YYYY-MM-DD
+
+            if (inputDate === correctDate) {
+                window.location.href = "carta.html"; // Redirigir a carta.html
+            } else {
+                alert("Esa no es la fecha en que se conocieron");
+            }
+        });
+    </script>
+</body>
+</html>
+
+
